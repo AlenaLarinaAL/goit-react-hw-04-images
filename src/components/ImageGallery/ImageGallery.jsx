@@ -2,15 +2,15 @@ import { List } from './ImageGallery.styled';
 import { ImageGalleryItem } from '../ImageGalleryItem/ImageGalleryItem';
 import PropTypes from 'prop-types';
 
-export const ImageGallery = ({ images, onClick }) => {
+export const ImageGallery = ({ images, openModal }) => {
   return (
     <List>
       {images.map(image => (
         <ImageGalleryItem
           key={image.id}
-          image={image}
-          onClick={onClick}
+          src={image.webformatURL}
           alt={image.tags}
+          openModal={() => openModal(image.largeImageURL, image.tags)}
         />
       ))}
     </List>
