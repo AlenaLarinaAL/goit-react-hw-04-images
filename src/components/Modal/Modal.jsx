@@ -41,7 +41,7 @@ export const Modal = ({ src, closeModal, alt }) => {
 };
 
 Modal.propTypes = {
-  url: PropTypes.string.isRequired,
+  src: PropTypes.string.isRequired,
   alt: PropTypes.string.isRequired,
-  onClose: PropTypes.func.isRequired,
+  closeModal: PropTypes.func.isRequired,
 };
